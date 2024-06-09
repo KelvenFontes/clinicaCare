@@ -7,7 +7,7 @@ const app = express();
 
 mongoose.connect('mongodb+srv://kelvenFontes:kelven@clinicacare.uym1kev.mongodb.net/')
   .then(() => {
-    const port = 4000;
+    const port = 3000;
 
     app.use((req, res, next) => {
       res.setHeader('Access-Control-Allow-Origin', '*');
