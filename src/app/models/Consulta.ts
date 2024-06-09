@@ -1,4 +1,3 @@
-import { Transaction } from "mongodb";
 import { Schema, model } from "mongoose";
 
 export const Consulta = model('Consulta', new Schema({
