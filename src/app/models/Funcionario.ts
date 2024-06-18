@@ -20,9 +20,5 @@ export const Funcionario = model('Funcionario', new Schema({
   senha: {
     type: String,
     required: true
-  },
-  listaDeConsultas: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Consulta'
-  }]
+  }
 }));

@@ -8,6 +8,7 @@ import { listPaciente } from './app/useCases/pacientes/listPaciente';
 import { authPaciente } from './app/useCases/auth/authPaciente';
 import { authMedico } from './app/useCases/auth/authMedico';
 import { authFuncionario } from './app/useCases/auth/authFuncionario';
+import { createFuncionario } from './app/useCases/funcionario/createFuncionario';
 
 export const router = Router();
 
@@ -20,6 +21,8 @@ router.put('/api/v1/paciente/:id', updatePaciente);
 router.post('/api/v1/medico', createMedico);
 router.put('/api/v1/medico/:idMedico', updateMedico);
 
+// Funcionario
+router.post('/api/v1/fucionario', createFuncionario);
 // Consulta
 
 // Agenda
