@@ -23,6 +23,7 @@ router.put('/api/v1/medico/:idMedico', updateMedico);
 
 // Funcionario
 router.post('/api/v1/fucionario', createFuncionario);
+
 // Consulta
 
 // Agenda

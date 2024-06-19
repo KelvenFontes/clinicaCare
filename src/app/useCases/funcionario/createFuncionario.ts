@@ -5,7 +5,7 @@ export async function createFuncionario(req: Request, res: Response) {
   try {
     const { nome, cargo, horarioTrabalho, email  } = req.body;
 
-    // Verifica se já existe um Medico com o mesmo Email
+    // Verifica se já existe um Funcionario com o mesmo Email
     const existingFuncionarioEmail = await Funcionario.findOne({ email });
 
     if (existingFuncionarioEmail) {
