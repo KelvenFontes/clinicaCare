@@ -37,18 +37,22 @@ const enderecoSchema = new Schema({
 });
 
 const historicoMedicoSchema = new Schema({
-  descricao: {
+  problema: {
     type: String,
     required: true
   },
-  data: {
-    type: Date,
-    required: true
-  },
-  medico: {
+  medicamento: {
     type: String,
     required: true
-  }
+  },
+  // data: {
+  //   type: Date,
+  //   required: true
+  // },
+  // medico: {
+  //   type: String,
+  //   required: true
+  // }
 });
 
 export const Paciente = model('Paciente', new Schema({
