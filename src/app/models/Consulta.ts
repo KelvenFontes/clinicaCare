@@ -5,10 +5,6 @@ export const Consulta = model('Consulta', new Schema({
     type: Date,
     required: true
   },
-  duracao: {
-    type: Number,
-    required: true
-  },
   diagnostico: {
     type: String
   },
@@ -21,11 +17,16 @@ export const Consulta = model('Consulta', new Schema({
   idMedico: {
     type: Schema.Types.ObjectId,
     ref: 'Medico',
+  },
+  especialidade: {
+    type: String,
     required: true
+  },
+  cpfPaciente: {
+    type: String,
   },
   idPaciente: {
     type: Schema.Types.ObjectId,
     ref: 'Paciente',
-    required: true
   }
 }));

@@ -10,6 +10,8 @@ import { authMedico } from './app/useCases/auth/authMedico';
 import { authFuncionario } from './app/useCases/auth/authFuncionario';
 import { createFuncionario } from './app/useCases/funcionario/createFuncionario';
 import { listPacienteByCPF } from './app/useCases/pacientes/listPacienteByCPF';
+import { getAgendaPaciente } from './app/useCases/agenda/listAgendaByPaciente';
+import { createConsulta } from './app/useCases/consultas/createConsulta';
 
 export const router = Router();
 
@@ -23,13 +25,18 @@ router.put('/api/v1/paciente/:id', updatePaciente);
 router.post('/api/v1/medico', createMedico);
 router.put('/api/v1/medico/:idMedico', updateMedico);
 
+
 // Funcionario
 router.post('/api/v1/fucionario', createFuncionario);
 
 // Consulta
+router.get('/api/v1/consulta', getAgenda);
+router.post('/api/v1/consulta', createConsulta);
+
 
 // Agenda
 router.get('/api/v1/medico/:idMedico/agenda', getAgenda);
+router.get('/api/v1/paciente/:idPaciente/agenda', getAgendaPaciente);
 
 // Auth
 router.post('/api/v1/auth/paciente', authPaciente);
