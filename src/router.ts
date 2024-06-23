@@ -12,6 +12,7 @@ import { createFuncionario } from './app/useCases/funcionario/createFuncionario'
 import { listPacienteByCPF } from './app/useCases/pacientes/listPacienteByCPF';
 import { getAgendaPaciente } from './app/useCases/agenda/listAgendaByPaciente';
 import { createConsulta } from './app/useCases/consultas/createConsulta';
+import { deleteConsulta } from './app/useCases/consultas/deleteConsulta';
 
 export const router = Router();
 
@@ -32,6 +33,7 @@ router.post('/api/v1/fucionario', createFuncionario);
 // Consulta
 router.get('/api/v1/consulta', getAgenda);
 router.post('/api/v1/consulta', createConsulta);
+router.delete('/api/v1/consulta/:cpfPaciente/:consultaId', deleteConsulta);
 
 
 // Agenda
