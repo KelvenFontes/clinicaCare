@@ -36,7 +36,7 @@ router.post('/api/v1/consulta', createConsulta);
 
 // Agenda
 router.get('/api/v1/medico/:idMedico/agenda', getAgenda);
-router.get('/api/v1/paciente/:idPaciente/agenda', getAgendaPaciente);
+router.get('/api/v1/paciente/:cpfPaciente/agenda', getAgendaPaciente);
 
 // Auth
 router.post('/api/v1/auth/paciente', authPaciente);
