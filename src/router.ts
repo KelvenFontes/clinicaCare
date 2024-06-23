@@ -9,11 +9,13 @@ import { authPaciente } from './app/useCases/auth/authPaciente';
 import { authMedico } from './app/useCases/auth/authMedico';
 import { authFuncionario } from './app/useCases/auth/authFuncionario';
 import { createFuncionario } from './app/useCases/funcionario/createFuncionario';
+import { listPacienteByCPF } from './app/useCases/pacientes/listPacienteByCPF';
 
 export const router = Router();
 
 // Paciente
 router.get('/api/v1/paciente', listPaciente);
+router.get('/api/v1/paciente/:cpf', listPacienteByCPF);
 router.post('/api/v1/paciente', createPaciente);
 router.put('/api/v1/paciente/:id', updatePaciente);
 
